@@ -26,7 +26,8 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: riggraz/no-style-please
+remote-theme: riggraz/no-style-please
+#theme: no-style-please
 plugins:
   - jekyll-feed
 
