@@ -1,11 +1,23 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
 <script>
-MathJax({
+MathJax = {
     tex: {
-    inlineMath: [ ['$', '$'] ]
-  }
-});  
-  alert("test")
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-</script>
+        inlineMath: [ ['$','$'], ['\\(', '\\)'] ], 
+        displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
+        processEscapes: true,
+    },
+    chtml: {
+        scale: 1,
+        matchFontHeight: true,
+    },
+    options: {
+        ignoreHtmlClass: "ignore-mathjax",
+    },
+    startup: {
+        typeset: false
+    }
+}
+</script> 
+
