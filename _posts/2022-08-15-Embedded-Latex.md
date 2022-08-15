@@ -3,6 +3,7 @@ layout: post
 title:  "Embedded-Latex"
 date:   2022-08-15 13:43:00 +0900
 categories: jekyll update
+use_math: true
 ---
 
 # Table of Contents
