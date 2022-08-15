@@ -25,5 +25,8 @@ x=\sqrt{b}
 \end{equation}                          
 
 If $a^2=b$ and $ b=2 $, then the solution must be
-either $$ a=+\sqrt{2} $$ or $$ a=-\sqrt{2} $$.
+either 
+$$ 
+a=+\sqrt{2} 
+$$ or $ a=-\sqrt{2} $.
 
