@@ -2,7 +2,7 @@
 layout: post
 title:  "(Writeup) HackTheBox-Photobomb"
 date:   2022-11-08 13:05:00 +0900
-categories: CTF
+categories: Security
 ---
 
 
