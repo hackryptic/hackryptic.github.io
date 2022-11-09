@@ -2,7 +2,7 @@
 layout: post
 title:  "Markdown converted from Org mode"
 date:   2022-08-12 12:08:00 +0900
-categories: jekyll update
+categories: test
 ---
 
 # Table of Contents

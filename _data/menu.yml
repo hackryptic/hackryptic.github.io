@@ -10,9 +10,16 @@ entries:
       show_more_text: See archive...
       show_more_url: archive.html
 
-  - title: posts by category
+  - title: Security
     post_list:
       category: Security
+      show_more: true
+      show_more_text: See more posts...
+      show_more_url: example2-archive.html
+
+  - title: Test
+    post_list:
+      category: test
       show_more: true
       show_more_text: See more posts...
       show_more_url: example2-archive.html
