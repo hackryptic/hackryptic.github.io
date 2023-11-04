@@ -41,7 +41,7 @@ HostIP가 바뀔때마다 일일히 입력하는 작업은 매우 번거로운 �
 그래서 다음과 같은 명령을 이용하여
 
 ~~~console
-[hackryptic@DESKTOP-HABG59U ~]$ export DISPLAY=$(echo "$((echo $(ipconfig.exe | grep -a 'Wi-Fi' -A 4 | cut -d":" -f 2 | tail -n1) && echo ":0.0") | tr -d "\n")")
+export DISPLAY=$(echo "$((echo $(ipconfig.exe | grep -a 'Wi-Fi' -A 4 | cut -d":" -f 2 | tail -n1) && echo ":0.0") | tr -d "\n")")
 ~~~
 
 ipconfig의 결과 값에서 내가 필요한 IP 주소를 뽑아오려는 시도를 했다. 추가적으로 뒤쪽에 0.0을 붙이는 작업도 같이 명령어에 포함하였다. (본 포스트에서는 IP가 111.111.111.111이라 가정)
@@ -49,7 +49,7 @@ ipconfig의 결과 값에서 내가 필요한 IP 주소를 뽑아오려는 시�
 그러나 명령어 실행결과,아래와 같이 뒤쪽에 붙어야 할 **:0.0**이 앞쪽을 덮어쓰는 방식으로 출력되는 문제가 발생했다.
 
 ~~~console
-[hackryptic@DESKTOP-HABG59U ~]$ echo $DISPLAY
+echo $DISPLAY
 :0.0111.111.111
 ~~~
 
@@ -70,7 +70,7 @@ ipconfig의 결과 값에서 내가 필요한 IP 주소를 뽑아오려는 시�
 명령어로 출력해보면 다음과 같다
 
 ~~~console
- echo "$(echo $(ipconfig.exe | grep -a 'Wi-Fi' -A 4 | cut -d":" -f 2 | tail -n1))"
+echo "$(echo $(ipconfig.exe | grep -a 'Wi-Fi' -A 4 | cut -d":" -f 2 | tail -n1))"
 
 출력:
 111.111.111.111
@@ -94,7 +94,7 @@ echo "$((echo $(ipconfig.exe | grep -a 'Wi-Fi' -A 4 | cut -d":" -f 2 | tail -n1)
 
 # 해결 방법
 
- tr -d "\\r" 명령을 사용하여 CR 부분을 미리 제거한다.
+**tr -d "\\r"** 명령을 사용하여 CR 부분을 미리 제거한다.
  
  ~~~console
 echo "$((echo $(ipconfig.exe | grep -a 'Wi-Fi' -A 4 | cut -d":" -f 2 | tail -n1 | tr -d "\r") && echo ":0.0") | tr -d "\n")"
